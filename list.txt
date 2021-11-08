@@ -1,0 +1,15 @@
+total 54
+drwxr-xr-x 1 403 197121    0 Nov  8 13:22 ./
+drwxr-xr-x 1 403 197121    0 Nov  3 08:47 ../
+drwxr-xr-x 1 403 197121    0 Nov  8 10:34 .git/
+-rw-r--r-- 1 403 197121  301 Nov  2 09:24 .gitignore
+-rw-r--r-- 1 403 197121 1090 Nov  2 09:24 LICENSE
+-rw-r--r-- 1 403 197121   55 Nov  2 09:27 README.md
+drwxr-xr-x 1 403 197121    0 Nov  2 11:10 Spring_00_Hello/
+drwxr-xr-x 1 403 197121    0 Nov  2 14:17 Spring_00_Hello-v2/
+drwxr-xr-x 1 403 197121    0 Nov  2 16:32 Spring_00_Hello-v3/
+drwxr-xr-x 1 403 197121    0 Nov  3 14:54 Spring_01_Student/
+drwxr-xr-x 1 403 197121    0 Nov  4 12:56 Spring_01_Student-a/
+drwxr-xr-x 1 403 197121    0 Nov  8 09:37 Spring_01_Student_v2/
+drwxr-xr-x 1 403 197121    0 Nov  8 12:23 Spring_01_Student_v2_A/
+-rw-r--r-- 1 403 197121    0 Nov  8 13:22 list.txt
