@@ -16,7 +16,7 @@
         <property name="dataSource" ref="ds"/>
     </bean>
 
-    <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="ds"/>
         <property name="packagesToScan" value="com.callor.student.models"/>
         <property name="jpaVendorAdapter">
@@ -33,7 +33,6 @@
             </props>
         </property>
     </bean>
-
     <jpa:repositories base-package="com.callor.student.repository"/>
 
 </beans>
