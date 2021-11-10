@@ -4,8 +4,9 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Spring_02_ReadBook" />
           <element id="jpa-descriptors" facet="Spring_02_ReadBook/jpa/JPA" />
+          <element id="module-output" name="readbook" />
+          <element id="jpa-descriptors" facet="readbook/jpa/JPA" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.18.RELEASE" />
@@ -88,9 +89,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.12" />
           <element id="library" level="project" name="Maven: org.jasypt:jasypt-spring31:1.9.3" />
           <element id="library" level="project" name="Maven: org.jasypt:jasypt:1.9.3" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.6" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.3.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.3.9.RELEASE" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="Spring_02_ReadBook/web/Web" />
+      <element id="javaee-facet-resources" facet="readbook/web/Web" />
     </root>
   </artifact>
 </component>
