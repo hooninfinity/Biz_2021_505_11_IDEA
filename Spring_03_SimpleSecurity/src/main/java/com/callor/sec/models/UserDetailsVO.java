@@ -18,16 +18,16 @@ import java.util.Collection;
  *
  * Security 의 어떤 연산이 VO 객체에 값을
  *      쓰거나(setter)
- *      읽을때(getter) 상당히 문제를 일으킬 것이다
+ *      읽을때(getter) 할때 상당히 문제를 일으킬 것이다
  *
  * 인터페이스를 상속받으면 method 를 정해진 이름으로
  * 강제 선언을 해야 하는데
- * 
+ *
  * 여기에서는 lombok 의 기능을 사용하기 위하여
  * 정해진 이름으로 각각 member 변수를 선언하고
- * lombok 을 사용하여 getter, setter 를 사용한다
+ * lombok 을 사용하여 getter, setter 를 선언한다
+ *
  */
-
 @Getter
 @Setter
 @ToString
@@ -35,10 +35,10 @@ import java.util.Collection;
 @NoArgsConstructor
 @Builder
 public class UserDetailsVO implements UserDetails {
-    // 오류를 줄이기 위한 선택사항
+
     private static final long serialVersionID = 1L;
 
-    /* 필수로 선언해야 할 변수들 */
+    /* 필수로 선언해야할 변수 들 */
     private String username;
     private String password;
 
@@ -49,10 +49,11 @@ public class UserDetailsVO implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    /* 필요에 따라 추가하여 사용하는 변수들 */
+    /* 필요에 따라 추가하여 사용하는 변수 들 */
     private String email;
     private String tel;
     private String address;
+
 
 
 }
