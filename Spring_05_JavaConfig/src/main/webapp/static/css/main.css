@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+div.search {
+    background-color: dodgerblue;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.search input {
+    display: inline-block;
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+table {
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+table thead tr {
+    border-top : 2px solid gray;
+    border-bottom : 2px solid gray;
+    background-color: darkgray;
+}
+table thead tr th {
+    padding: 5px;
+}
+table tbody tr {
+    border-bottom: 2px solid gray;
+}
+table tbody tr td {
+    padding: 5px;
+    text-align: center;
+}

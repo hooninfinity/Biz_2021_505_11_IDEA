@@ -12,7 +12,7 @@ public class AppWebXmlConfig extends AbstractAnnotationConfigDispatcherServletIn
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
-                RootConfig.class,
+                ServletConfig.class,
                 MyBatisConfig.class
         };
     }
