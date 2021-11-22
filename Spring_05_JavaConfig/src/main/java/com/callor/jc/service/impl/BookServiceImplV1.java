@@ -15,6 +15,4 @@ public class BookServiceImplV1 {
         ddlDao.create_table(CreateTableSQL.create_book_table);
 
     }
-
-
 }

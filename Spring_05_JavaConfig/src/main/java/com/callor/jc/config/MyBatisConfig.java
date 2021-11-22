@@ -32,32 +32,19 @@ public class MyBatisConfig {
     private String password;
 
 
-    // 환경변수를 가져와서 config를 설정하는 부분
-    private EnvironmentStringPBEConfig envConfig() {
-        EnvironmentStringPBEConfig config
-                = new EnvironmentStringPBEConfig();
-        config.setAlgorithm("PBEWithMD5AndDES");
-        config.setPasswordEnvName("callor.com");
-        return config;
+    private final StandardPBEStringEncryptor encryptor;
+    public MyBatisConfig(StandardPBEStringEncryptor encryptor) {
+        this.encryptor = encryptor;
     }
-
-    // 비밀번호를 복호화 시키는
-    private StandardPBEStringEncryptor encryptor() {
-        StandardPBEStringEncryptor encryptor
-                = new StandardPBEStringEncryptor();
-        encryptor.setConfig(this.envConfig());
-        return encryptor;
-    }
-
     // dataSource
     private DataSource getDataSource() {
         BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName(driver);
         ds.setUrl(url);
-
-        String planUsername = this.encryptor().decrypt(username);
-        String planPassword = this.encryptor().decrypt(password);
-
+        String planUsername
+                = encryptor.decrypt(username);
+        String planPassword
+                = encryptor.decrypt(password);
         ds.setUsername(planUsername);
         ds.setPassword(planPassword);
         return ds;
@@ -74,12 +61,12 @@ public class MyBatisConfig {
     }
 
     // SqlSessionTemplate
-    // 여기도 반드시 Bean 으로 등록한다
+    // 여기도 반드시 Bean 으로 등록한다.
     @Bean
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory factory) {
-        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(factory);
+        SqlSessionTemplate sqlSessionTemplate
+                = new SqlSessionTemplate(factory);
         return sqlSessionTemplate;
     }
-
 
 }

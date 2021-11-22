@@ -18,12 +18,12 @@ public class MakeDBConnection {
         final Scanner scan = new Scanner(System.in);
 
         String saltPass = sysEnv.get("callor.com");
-        System.out.println("시스템 환경변수 : " + saltPass);
+        System.out.println("시스템 환경변수 : "  + saltPass);
 
-        System.out.printf("username : ");
+        System.out.print("username : ");
         String username = scan.nextLine();
 
-        System.out.printf("password : ");
+        System.out.print("password : ");
         String password = scan.nextLine();
 
         StandardPBEStringEncryptor pbe = new StandardPBEStringEncryptor();
@@ -43,9 +43,5 @@ public class MakeDBConnection {
         out.flush();
         out.close();
         System.out.println("DB Connection Properties Complete!!");
-
-
-
     }
-
 }
